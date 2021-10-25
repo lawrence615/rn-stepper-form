@@ -1,0 +1,1 @@
+export const selectRole = state => state.authStepper.role
