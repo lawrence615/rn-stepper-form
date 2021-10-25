@@ -34,7 +34,7 @@ To check:
    $ adb devices
 
    List of devices attached
-   14ed2fcc device         # Physical device
+   PY2MF5WQZCJ device         # Physical device
    ```
 
 Run app on Android phone
