@@ -4,6 +4,6 @@ import authStepper from 'reducers/authStepperSlice'
 
 export const store = configureStore({
   reducer: {
-    authStepper
+    stepper: authStepper
   }
 })
