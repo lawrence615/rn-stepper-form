@@ -4,12 +4,14 @@ import { useSelector, useDispatch } from 'react-redux'
 import tw from 'tailwind-react-native-classnames'
 import { Icon } from 'react-native-elements'
 import { useFocusEffect } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native'
 
 import { setStep, setRole } from 'reducers/authStepperSlice'
 import { selectRole } from 'selectors/authStepperSlice'
 
 const PickRole = () => {
 
+  const navigation = useNavigation()
   const dispatch = useDispatch()
   const role = useSelector(selectRole)
 
@@ -24,7 +26,8 @@ const PickRole = () => {
       return
     }
     console.log('onClickNext')
-    dispatch(setStep(1))
+    // dispatch(setStep(1))
+    navigation.navigate('StartStepper')
   }
 
   // useEffect(() => {
@@ -34,7 +37,7 @@ const PickRole = () => {
 
   useFocusEffect(
     useCallback(() => {
-      dispatch(setStep(0))
+      dispatch(setStep(1))
     }, [])
   );
 
@@ -89,10 +92,12 @@ const PickRole = () => {
         </TouchableOpacity>
       </View>
       <TouchableOpacity
-        style={tw`flex-row bg-gray-100 absolute bottom-5 right-5 p-3 rounded-full shadow-lg`}
+        style={tw`flex-row absolute bottom-0 self-center`}
         onPress={() => onClickNext()}>
-        <Text>Next</Text>
-        <Icon name="chevron-right" color="#4F8EF7" />
+        <View style={tw`flex-row justify-center items-center`}>
+          <Text style={tw`text-xl font-extrabold text-blue-400 `}>Click to continue</Text>
+          <Icon name='arrow-forward-outline' type='ionicon' color='#D1D5DB' />
+        </View>
       </TouchableOpacity>
     </SafeAreaView>
   )
