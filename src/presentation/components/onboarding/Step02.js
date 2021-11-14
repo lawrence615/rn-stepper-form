@@ -1,44 +1,36 @@
-import React, { useEffect } from 'react'
-import { SafeAreaView, View, TextInput } from 'react-native'
+import React, { useCallback } from 'react'
+import { View, TextInput } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 import tw from 'tailwind-react-native-classnames'
+import { useFocusEffect } from '@react-navigation/native';
 
 import { setStep } from 'reducers/authStepperSlice'
-import { selectRole, selectStep } from 'selectors/authStepperSlice'
-
-import Header from './Header'
-import Nav from './Nav'
 
 const Step02 = () => {
 
   const dispatch = useDispatch()
 
-  // const step = useSelector(selectStep)
-
-  // useEffect(() => {
-  //   console.log('current step')
-  //   dispatch(setStep(2))
-  // })
+  useFocusEffect(
+    useCallback(() => {
+      dispatch(setStep(2))
+    }, [])
+  );
 
   return (
-    <SafeAreaView style={tw`bg-white flex-1`}>
-      <Header />
-      <View style={tw`flex flex-col`}>
-        <TextInput
-          style={tw`bg-gray-200 p-4 rounded-md`}
-          placeholder="Postal address" />
-        <TextInput
-          style={tw`bg-gray-200 p-4 mt-10 mb-10 rounded-md`}
-          placeholder="Physical location" />
-        <TextInput
-          style={tw`bg-gray-200 p-4 rounded-md`}
-          placeholder="Email" />
-        <TextInput
-          style={tw`bg-gray-200 p-4  mt-10 rounded-md`}
-          placeholder="Alternative phone number" />
-      </View>
-      <Nav />
-    </SafeAreaView>
+    <View style={tw`flex flex-1 flex-col py-10`}>
+      <TextInput
+        style={tw`bg-gray-200 p-4 rounded-md`}
+        placeholder="Postal address" />
+      <TextInput
+        style={tw`bg-gray-200 p-4 mt-10 mb-10 rounded-md`}
+        placeholder="Physical location" />
+      <TextInput
+        style={tw`bg-gray-200 p-4 rounded-md`}
+        placeholder="Email" />
+      <TextInput
+        style={tw`bg-gray-200 p-4  mt-10 rounded-md`}
+        placeholder="Alternative phone number" />
+    </View>
   )
 }
 
