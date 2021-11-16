@@ -9,7 +9,7 @@ const initialState = {
     },
     {
       label: 'STEP 02',
-      desc: 'Details',
+      desc: 'Contacts',
       isComplete: false
     },
     {
