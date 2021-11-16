@@ -9,6 +9,7 @@ The designs of the app have been picked from Dribbble, from the great works of [
 ## How to run the app
 
 Move into the app
+
 ```
 $ cd <project>
 ```
@@ -41,3 +42,6 @@ Run app on Android phone
 
 ```
 $ npx react-native run-android --port=8082
+```
+
+## TODOS
