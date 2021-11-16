@@ -26,9 +26,7 @@ const Step02 = () => {
         placeholder="Physical location" />
       <TextInput
         style={tw`bg-gray-200 p-4 rounded-md`}
-        placeholder="Email" />
-      <TextInput
-        style={tw`bg-gray-200 p-4  mt-10 rounded-md`}
+        textContentType="telephoneNumber"
         placeholder="Alternative phone number" />
     </View>
   )
