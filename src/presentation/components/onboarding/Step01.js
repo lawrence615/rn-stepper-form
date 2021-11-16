@@ -38,9 +38,11 @@ const Step01 = () => {
               placeholder="Name of Law Firm" />
             <TextInput
               style={tw`bg-gray-200 p-4 rounded-md`}
+              textContentType="emailAddress"
               placeholder="Email" />
             <TextInput
               style={tw`bg-gray-200 p-4  mt-10 rounded-md`}
+              textContentType="telephoneNumber"
               placeholder="Phone number" />
           </View>
         </View>
@@ -57,9 +59,11 @@ const Step01 = () => {
               placeholder="Name of organization" />
             <TextInput
               style={tw`bg-gray-200 p-4 rounded-md`}
+              textContentType="emailAddress"
               placeholder="Email" />
             <TextInput
               style={tw`bg-gray-200 p-4  mt-10 rounded-md`}
+              textContentType="telephoneNumber"
               placeholder="Phone number" />
           </View>
         </View>
@@ -78,12 +82,14 @@ const Step01 = () => {
           <View style={tw`flex flex-col`}>
             <TextInput
               style={tw`bg-gray-200 p-4 rounded-md`}
+              textContentType="emailAddress"
               placeholder="Email" />
             <TextInput
               style={tw`bg-gray-200 p-4 mt-10 mb-10 rounded-md`}
               placeholder="ID Number" />
             <TextInput
               style={tw`bg-gray-200 p-4 rounded-md`}
+              textContentType="telephoneNumber"
               placeholder="Phone number" />
           </View>
         </View>
