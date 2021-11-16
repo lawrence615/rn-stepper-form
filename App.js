@@ -1,5 +1,5 @@
 import React from 'react';
-import { KeyboardAvoidingView, Platform } from 'react-native';
+import { KeyboardAvoidingView, Platform, StatusBar } from 'react-native';
 import { Provider } from 'react-redux'
 import { store } from './src/application/store'
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -11,6 +11,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <SafeAreaProvider>
+        <StatusBar hidden={false} backgroundColor="#60A5FA" translucent={false} />
         <KeyboardAvoidingView
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
           keyboardVerticalOffset={Platform.OS === 'ios' ? -64 : 0}
