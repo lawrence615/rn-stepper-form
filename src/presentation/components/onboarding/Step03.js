@@ -21,10 +21,12 @@ const Step03 = () => {
       <TextInput
         style={tw`bg-gray-200 p-4 rounded-md`}
         placeholder="Password"
+        secureTextEntry={true}
         textContentType="newPassword" />
       <TextInput
         style={tw`bg-gray-200 p-4 mt-10 mb-10 rounded-md`}
         placeholder="Confirm password"
+        secureTextEntry={true}
         textContentType="newPassword" />
     </View>
   )
