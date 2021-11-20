@@ -23,7 +23,7 @@ const Step01 = () => {
   return (
     <View style={tw`flex-1`}>
       <View style={tw`py-10`}>
-        <Text style={tw`text-xl font-medium`}>A little about you</Text>
+        <Text style={[tw`text-xl font-medium`, {color:'#102A68'}]}>A little about you</Text>
         <Text style={tw`text-sm font-light`}>Please fill the inputs below</Text>
       </View>
 
