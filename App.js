@@ -11,7 +11,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <SafeAreaProvider>
-        <StatusBar hidden={false} backgroundColor="#60A5FA" translucent={false} />
+        <StatusBar hidden={false} backgroundColor="#FFF" barStyle="dark-content" translucent={false} />
         <KeyboardAvoidingView
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
           keyboardVerticalOffset={Platform.OS === 'ios' ? -64 : 0}
