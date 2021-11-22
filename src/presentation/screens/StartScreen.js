@@ -1,13 +1,17 @@
 import React, { Component, useState } from 'react'
 import { SafeAreaView, View, TouchableOpacity, Text, TextInput, StyleSheet } from 'react-native'
+import { useDispatch } from 'react-redux'
 import { Icon } from 'react-native-elements'
 import tw from 'tailwind-react-native-classnames'
 import { useNavigation } from '@react-navigation/native'
 
+import { setRole } from 'reducers/authStepperSlice'
+
 const StartScreen = () => {
 
-  const navigation = useNavigation()
   const [hidePassword, setHidePassword] = useState(true)
+  const dispatch = useDispatch()
+  const navigation = useNavigation()
 
 
   const renderIcon = () => {
@@ -18,6 +22,11 @@ const StartScreen = () => {
 
   const onPasswordShow = () => {
     return hidePassword ? setHidePassword(false) : setHidePassword(true)
+  }
+
+  const onRegister = () => {
+    dispatch(setRole(null))
+    navigation.navigate('RegisterScreen')
   }
 
   return (
@@ -48,7 +57,7 @@ const StartScreen = () => {
         </View>
         <View style={tw`flex-row justify-center items-center absolute bottom-0 self-center`}>
           <Text style={tw`text-lg font-normal`}>Don't have an account? </Text>
-          <TouchableOpacity onPress={() => navigation.navigate('RegisterScreen')}>
+          <TouchableOpacity onPress={onRegister}>
             <Text style={[tw`text-lg font-extrabold`, { color: "#102A68" }]}>Register</Text>
           </TouchableOpacity>
         </View>
