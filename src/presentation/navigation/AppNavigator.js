@@ -6,6 +6,7 @@ import StartScreen from 'screens/StartScreen'
 import LoginScreen from 'screens/LoginScreen'
 import RegisterScreen from 'screens/RegisterScreen'
 import HomeScreen from 'screens/HomeScreen'
+import AddNewScreen from 'screens/AddNewScreen'
 
 const AppNavigator = () => {
   const Stack = createNativeStackNavigator()
@@ -17,6 +18,7 @@ const AppNavigator = () => {
         <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false }} />
         <Stack.Screen name="RegisterScreen" component={RegisterScreen} options={{ headerShown: false }} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="AddNewScreen" component={AddNewScreen} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   )
