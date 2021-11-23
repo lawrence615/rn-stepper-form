@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react'
 import { View, TextInput } from 'react-native'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { Icon } from 'react-native-elements'
 import tw from 'tailwind-react-native-classnames'
 import { useFocusEffect } from '@react-navigation/native';
