@@ -42,6 +42,9 @@ export const authStepperSlice = createSlice({
     },
     setComplete: (state, action) => {
 
+    },
+    clearKYC:(state, action) => {
+      
     }
   }
 })
