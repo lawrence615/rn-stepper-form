@@ -1,35 +1,47 @@
 import React from 'react'
-import { SafeAreaView, View, Text } from 'react-native'
+import { TouchableWithoutFeedback, View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import tw from 'tailwind-react-native-classnames'
 import { Icon } from 'react-native-elements'
 
 import DashboardScreen from 'components/home/Dashboard'
-import AddNewScreen from 'components/home/AddNewScreen'
 import AccountScreen from 'components/home/Account'
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
 
-  const Tab = createBottomTabNavigator()
+  const BottomTab = createBottomTabNavigator()
 
-  const AddNewButton = () => {
+  const onAddNew = () => {
+    console.log('onAddNew')
+    navigation.navigate('AddNewScreen')
+  }
+
+  const AddNewComponent = () => {
+    return null
+  }
+
+  const AddNewScreen = () => {
     return (
       <>
-
+        <TouchableWithoutFeedback onPress={onAddNew}>
+          <View style={{ bottom: 25, height:68, width:68}}>
+            <Icon size={70} name='add-circle' color={'#00a16e'} />
+          </View>
+        </TouchableWithoutFeedback>
       </>
-    )
+    );
   }
 
 
   return (
-    <Tab.Navigator
+    <BottomTab.Navigator
       initialRouteName="Dashboard"
       screenOptions={{
         tabBarActiveTintColor: '#fe9d34',
         tabBarStyle: { height: 60, borderTopLeftRadius: 20, borderTopRightRadius: 20 },
         headerShown: false
       }}>
-      <Tab.Screen
+      <BottomTab.Screen
         name="Dashboard"
         component={DashboardScreen}
         options={{
@@ -38,7 +50,7 @@ const HomeScreen = () => {
             <Icon name='home' type='ionicon' color={color} size={size} />
           )
         }} />
-      <Tab.Screen
+      {/* <BottomTab.Screen
         name="Add"
         options={{
           tabBarLabel: '',
@@ -58,8 +70,15 @@ const HomeScreen = () => {
             </View>
           )
         }}
-        component={AddNewScreen} />
-      <Tab.Screen
+        component={AddNewScreen} /> */}
+      <BottomTab.Screen
+        name="Add"
+        component={AddNewComponent}
+        options={{
+          tabBarButton: () => <AddNewScreen />,
+        }}
+      />
+      <BottomTab.Screen
         name="Account"
         component={AccountScreen}
         options={{
@@ -68,7 +87,7 @@ const HomeScreen = () => {
             <Icon name='person' type='ionicon' color={color} size={size} />
           )
         }} />
-    </Tab.Navigator>
+    </BottomTab.Navigator>
   )
 }
 
