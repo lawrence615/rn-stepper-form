@@ -44,4 +44,8 @@ Run app on Android phone
 $ npx react-native run-android --port=8082
 ```
 
-## TODOS
+## Screenshots
+
+![screen-1](https://user-images.githubusercontent.com/3224157/142970226-939d5a2c-04e5-4e25-b507-1657587dbb41.jpeg)
+![screen-2](https://user-images.githubusercontent.com/3224157/142970234-710ca0bb-80e3-4f3b-ba4e-1b8c06b28cf7.jpeg)
+![screen-3](https://user-images.githubusercontent.com/3224157/142970236-f8c7f021-2992-4e64-acd5-509a8ede1382.jpeg)
