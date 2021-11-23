@@ -4,7 +4,7 @@ import tw from 'tailwind-react-native-classnames'
 
 const Account = () => {
   return (
-    <SafeAreaView style={tw`bg-white flex-grow p-3`}>
+    <SafeAreaView style={[tw`flex-grow p-3`, {backgroundColor:'#FAFAFF'}]}>
       <View>
         <Text> Account Screen </Text>
       </View>
