@@ -46,6 +46,6 @@ $ npx react-native run-android --port=8082
 
 ## Screenshots
 
-![screen-1](https://user-images.githubusercontent.com/3224157/142970226-939d5a2c-04e5-4e25-b507-1657587dbb41.jpeg)
-![screen-2](https://user-images.githubusercontent.com/3224157/142970234-710ca0bb-80e3-4f3b-ba4e-1b8c06b28cf7.jpeg)
-![screen-3](https://user-images.githubusercontent.com/3224157/142970236-f8c7f021-2992-4e64-acd5-509a8ede1382.jpeg)
+![screen-1](https://user-images.githubusercontent.com/3224157/142970671-c89675db-2262-42cb-a0b3-1c5ead200e30.jpeg)
+![screen-2](https://user-images.githubusercontent.com/3224157/142970672-4448679c-fe13-4189-9392-241749484f01.jpeg)
+![screen-3](https://user-images.githubusercontent.com/3224157/142970673-a65f6f9b-73a7-4745-ad38-121eef2e3675.jpeg)
