@@ -36,7 +36,7 @@ const Nav = () => {
         step === 1 && (
           <TouchableOpacity
             style={tw`justify-between py-3 rounded-full items-center`}>
-            <Text style={[tw`text-xl font-semibold`, {color:'#102A68'}]} onPress={() => onRoleChange()}>Change role</Text>
+            <Text style={[tw`text-xl font-semibold`, { color: '#102A68' }]} onPress={() => onRoleChange()}>Change role</Text>
           </TouchableOpacity>
         )
       }
@@ -44,14 +44,14 @@ const Nav = () => {
         step > 1 && (
           <TouchableOpacity
             style={tw`justify-between py-3 rounded-full items-center`}>
-            <Text style={[tw`text-xl font-semibold`, {color:'#102A68'}]} onPress={() => onPreviousStep()}>Previous step</Text>
+            <Text style={[tw`text-xl font-semibold`, { color: '#102A68' }]} onPress={() => onPreviousStep()}>Previous step</Text>
           </TouchableOpacity>
         )
       }
       {
         step < 4 && (
           <TouchableOpacity
-            style={[tw`justify-between w-36 h-16 px-4 py-4 rounded-md items-center`, {backgroundColor:'#FE9D34'}]}>
+            style={[tw`justify-between w-36 h-16 px-4 py-4 rounded-md items-center`, { backgroundColor: '#FE9D34' }]}>
             <Text style={[tw`text-xl text-white font-semibold`]} onPress={() => onNextStep()}>Next step</Text>
           </TouchableOpacity>
         )
@@ -59,7 +59,7 @@ const Nav = () => {
       {
         step === 4 && (
           <TouchableOpacity
-            style={tw`justify-between bg-blue-400 w-36 h-16 px-4 py-4 rounded-md items-center`}>
+            style={[tw`justify-between w-36 h-16 px-4 py-4 rounded-md items-center`, { backgroundColor: '#FE9D34' }]}>
             <Text style={tw`text-xl text-white font-semibold`} onPress={() => onFinish()}>Finish</Text>
           </TouchableOpacity>
         )
