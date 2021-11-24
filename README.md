@@ -16,14 +16,14 @@ $ cd <project>
 
 Start metro server on one tab
 
-```
-$ react-native start --port=8082
+```sh
+react-native start --port=8082
 ```
 
 OR
 
-```
-$ yarn start --port=8082 --reset-cache
+```sh
+yarn start --port=8082 --reset-cache
 ```
 
 *NB:* Make sure you have a device connected e.g. Android phone
@@ -40,14 +40,14 @@ To check:
 
 Run app on Android phone
 
-```
-$ npx react-native run-android --port=8082
+```sh
+npx react-native run-android --port=8082
 ```
 
 ## Screenshots
 
 
-|                         | |
+|                         | |                         
 :-------------------------:|:-------------------------:
 ![screen-1](https://user-images.githubusercontent.com/3224157/142985490-728311c1-85e0-4f15-b414-7352d507bcc6.jpeg)  |  ![screen-2](https://user-images.githubusercontent.com/3224157/142985495-fbe6a632-15c2-453a-bb3a-09866d547a18.jpeg)
 ![screen-3](https://user-images.githubusercontent.com/3224157/142985500-dd4da8c9-b28d-4cd9-8cf3-9c3fb52361c8.jpeg)  |  ![screen-4](https://user-images.githubusercontent.com/3224157/142985503-6dcba78f-da52-422a-92b7-768d05a2a0b9.jpeg)
