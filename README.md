@@ -38,7 +38,7 @@ To check:
    PY2MF5WQZCJ device         # Physical device
    ```
 
-Run app on Android phone
+Open another tab and run app on Android phone
 
 ```sh
 npx react-native run-android --port=8082
