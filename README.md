@@ -11,7 +11,7 @@ The designs of the app have been picked from Dribbble, from the great works of [
 Move into the app
 
 ```bash
-$ cd <project>
+$ cd <app>
 ```
 
 Start metro server on one tab
